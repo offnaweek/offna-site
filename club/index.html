@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta http-equiv="Cache-Control" content="no-cache">
+  <meta name="theme-color" content="#000000">
+  <meta name="robots" content="noindex">
+  <title>OFF/NA Members Club</title>
+  <link rel="icon" href="../assets/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="club.css">
+</head>
+<body>
+  <!-- Screen 1: the photo seen through the card's viewfinder -->
+  <section class="finder" id="top">
+    <img class="finder__img" id="d-image" alt="">
+    <div class="frame">
+      <p class="corner tl" id="d-kicker"></p>
+      <p class="corner tr" id="d-date"></p>
+      <p class="corner bl"><span class="logo" data-logo></span><span>Members Club<br>2026–2027</span></p>
+      <p class="corner br" id="d-time"></p>
+      <div class="scale" aria-hidden="true"></div>
+      <div class="reticle" aria-hidden="true"><i></i></div>
+    </div>
+    <a class="scroll-cue" href="#drop">Drop <span id="d-num"></span> ↓</a>
+  </section>
+
+  <!-- Screen 2: the details, on card yellow -->
+  <section class="drop" id="drop">
+    <header class="drop__head">
+      <p class="label">Drop <span data-num></span></p>
+      <p class="label" id="d-countdown"></p>
+    </header>
+
+    <h1 class="drop__title" id="d-title"></h1>
+
+    <dl class="facts">
+      <div id="f-date"><dt>Date</dt><dd></dd></div>
+      <div id="f-time"><dt>Time</dt><dd></dd></div>
+      <div id="f-place"><dt>Place</dt><dd></dd></div>
+    </dl>
+
+    <p class="drop__text" id="d-text"></p>
+
+    <nav class="actions" id="d-links"></nav>
+
+    <footer class="drop__foot">
+      <span class="logo" data-logo></span>
+      <span>Tap again for the next drop</span>
+    </footer>
+  </section>
+
+  <script src="drop.js"></script>
+  <script src="club.js"></script>
+</body>
+</html>
