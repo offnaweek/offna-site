@@ -2,6 +2,9 @@
 const d = window.DROP || {};
 const $ = (id) => document.getElementById(id);
 
+// Drawn arrow: the ↗ character turns into an emoji on iPhone
+const ARROW = '<svg class="arrow" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 9.5 9.5 2.5M3.5 2.5h6v6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/></svg>';
+
 const start = d.start ? new Date(d.start) : null;
 const tz = { timeZone: "Asia/Jerusalem" };
 const pad = (n) => String(n).padStart(2, "0");
@@ -49,7 +52,13 @@ const fact = (id, text, href) => {
     a.href = href;
     a.target = "_blank";
     a.rel = "noopener";
-    a.textContent = text + "\u00a0↗"; // keep the arrow on the same line
+    // last word + arrow wrapped together so the arrow never sits alone on a line
+    const words = text.split(" ");
+    const tail = document.createElement("span");
+    tail.style.whiteSpace = "nowrap";
+    tail.textContent = words.pop() + "\u00a0";
+    tail.insertAdjacentHTML("beforeend", ARROW);
+    a.append(words.length ? words.join(" ") + " " : "", tail);
     dd.append(a);
   } else dd.textContent = text;
 };
@@ -112,7 +121,7 @@ const nav = $("d-links");
   if (l.type === "calendar" && !start) return;
   const el = document.createElement(l.type === "calendar" ? "button" : "a");
   el.className = "btn";
-  el.innerHTML = `<span></span><span>${l.type === "calendar" ? "+" : "↗"}</span>`;
+  el.innerHTML = `<span></span><span>${l.type === "calendar" ? "+" : ARROW}</span>`;
   el.firstChild.textContent = l.label;
   if (l.type === "calendar") el.addEventListener("click", addToCalendar);
   else Object.assign(el, { href: l.href, target: "_blank", rel: "noopener" });

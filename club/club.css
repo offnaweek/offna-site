@@ -33,6 +33,8 @@ body {
 
 [hidden] { display: none !important; }
 
+.arrow { width: 0.62em; height: 0.62em; display: inline-block; vertical-align: 0.02em; }
+
 /* ── screen 1: viewfinder ───────────────────────────── */
 
 .finder {
