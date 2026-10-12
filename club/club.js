@@ -92,7 +92,7 @@ setInterval(countdown, 1000);
 const utc = (date) => date.toISOString().replace(/[-:]/g, "").replace(/\.\d{3}/, "");
 const addToCalendar = () => {
   const end = new Date(start.getTime() + (d.hours || 2) * 3600e3);
-  const title = `OFF/NA — ${d.title || "Members Club"}`;
+  const title = d.title || "OFF/NA Members Club";
   if (/Android/i.test(navigator.userAgent)) {
     const q = new URLSearchParams({
       action: "TEMPLATE", text: title, dates: `${utc(start)}/${utc(end)}`,

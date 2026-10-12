@@ -8,7 +8,7 @@
 window.DROP = {
   number: "01",                         // shown as "DROP 01"
   kicker: "You are invited",            // top-left line, like the card
-  title: "12:11 Show",
+  title: "OFF/NA x Fashion Week",
 
   // Start time with Israel's UTC offset (+02:00 in winter, +03:00 in summer)
   start: "2026-11-12T13:00:00+02:00",
