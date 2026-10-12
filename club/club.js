@@ -49,7 +49,7 @@ const fact = (id, text, href) => {
     a.href = href;
     a.target = "_blank";
     a.rel = "noopener";
-    a.textContent = text + " ↗";
+    a.textContent = text + "\u00a0↗"; // keep the arrow on the same line
     dd.append(a);
   } else dd.textContent = text;
 };

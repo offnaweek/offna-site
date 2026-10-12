@@ -20,7 +20,7 @@ window.DROP = {
   image: "drops/12-11-show.jpg",
   imageAlt: "Model in a net dress with metal feathers",
 
-  text: "Members only. Bring the card — it's your entry.",
+  text: "An invite today. Your membership card after.",
 
   // Extra buttons. "calendar" builds an add-to-calendar entry automatically.
   links: [
