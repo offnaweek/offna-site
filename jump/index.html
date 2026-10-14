@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>OFF/NA</title>
+
+  <!-- ───────────────────────────────────────────────────────
+       NFC JUMP — where /jump sends people.
+       To change the destination, edit ONLY the URL after "url=" below.
+       ─────────────────────────────────────────────────────── -->
+  <meta http-equiv="refresh" content="0; url=https://www.instagram.com/offnaweek/">
+
+  <script>
+    // Same destination, read from the line above; replace() keeps /jump out of the back button
+    const target = document.querySelector('meta[http-equiv="refresh"]').content.split("url=")[1];
+    location.replace(target);
+  </script>
+  <style>body { background: #000; }</style>
+</head>
+<body></body>
+</html>
