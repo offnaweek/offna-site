@@ -146,3 +146,8 @@ body {
   .hint-short { display: inline; }
 
 }
+
+/* under the fanzine: the hint, centred, above the strip of spreads */
+.fz-bar { flex-direction: column; align-items: center; gap: 10px; }
+.fz-bar .hint { text-align: center; }
+.fz-bar .fz-strip { flex: none; width: min(640px, 100%); margin: 0; }
