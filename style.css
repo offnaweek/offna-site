@@ -84,9 +84,9 @@ body {
 /* ── 3. fanzine ─────────────────────────────────────── */
 .fz-section { position: relative; border-top: var(--rule) solid var(--volt); }
 .fz-sticky {
-  position: sticky;
-  top: var(--head-h, 50px);
+  position: relative;
   height: calc(100svh - var(--head-h, 50px));
+  min-height: 520px;
   display: flex;
   flex-direction: column;
   overflow: hidden;
