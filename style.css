@@ -114,8 +114,36 @@ body {
   letter-spacing: -0.055em;
   text-transform: uppercase;
 }
-.about__text { display: grid; gap: 0.8em; max-width: 34em; border-top: var(--rule) solid var(--ink); padding-top: 18px; }
-.about__text p { font-weight: 600; font-size: clamp(19px, 2.4vw, 30px); line-height: 1.22; letter-spacing: -0.02em; }
+.about__text {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: var(--gutter);
+  row-gap: clamp(22px, 2.6vw, 34px);
+  border-top: var(--rule) solid var(--ink);
+  padding-top: clamp(24px, 3vw, 40px);
+}
+/* the first paragraph leads, large; the rest read as calm body text in a narrower column */
+.about__text p {
+  grid-column: 6 / span 6;
+  max-width: 34em;
+  font-weight: 450;
+  font-size: clamp(17px, 1.45vw, 21px);
+  line-height: 1.55;
+  letter-spacing: -0.005em;
+  text-wrap: pretty;
+}
+.about__text p:first-child {
+  grid-column: 1 / span 10;
+  max-width: 24em;
+  font-weight: 600;
+  font-size: clamp(24px, 3.2vw, 44px);
+  line-height: 1.18;
+  letter-spacing: -0.025em;
+  margin-bottom: clamp(12px, 2vw, 32px);
+}
+@media (max-width: 760px) {
+  .about__text p, .about__text p:first-child { grid-column: 1 / -1; }
+}
 
 .actions { display: grid; gap: 10px; }
 @media (min-width: 640px) { .actions { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); } }
