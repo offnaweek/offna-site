@@ -114,8 +114,8 @@ body {
   letter-spacing: -0.055em;
   text-transform: uppercase;
 }
-.about__text { display: grid; gap: 0.8em; max-width: 30em; border-top: var(--rule) solid var(--ink); padding-top: 18px; }
-.about__text p { font-weight: 600; font-size: clamp(20px, 3vw, 34px); line-height: 1.2; letter-spacing: -0.02em; }
+.about__text { display: grid; gap: 0.8em; max-width: 34em; border-top: var(--rule) solid var(--ink); padding-top: 18px; }
+.about__text p { font-weight: 600; font-size: clamp(19px, 2.4vw, 30px); line-height: 1.22; letter-spacing: -0.02em; }
 
 .actions { display: grid; gap: 10px; }
 @media (min-width: 640px) { .actions { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); } }
