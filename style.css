@@ -105,7 +105,7 @@ body {
   flex-direction: column;
   gap: clamp(28px, 5vw, 48px);
 }
-.about__head { display: flex; justify-content: space-between; }
+.about__head { display: flex; justify-content: flex-end; }
 .about__title {
   font-weight: 700;
   font-size: clamp(56px, 17vw, 200px);
