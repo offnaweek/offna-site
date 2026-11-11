@@ -14,20 +14,29 @@
 </head>
 <body>
   <!-- 1. HEADER -->
-  <header class="bar site-head">
-    <a class="head-logo" href="./" aria-label="OFF/NA, home">
-      <img src="assets/logo.svg" alt="OFF/NA" id="logo-fallback">
-    </a>
-    <nav class="head-nav" aria-label="Site">
+  <header class="site-head">
+    <a class="head-logo logo" data-logo href="./" aria-label="OFF/NA, home">OFF/NA</a>
+    <nav class="head-nav label" aria-label="Site">
       <a href="#fanzine-section">Fanzine</a>
       <a href="#about">About</a>
-      <a href="https://www.instagram.com/offnaweek/" target="_blank" rel="noopener">Instagram <svg class="arrow" width="9" height="9" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 9.5 9.5 2.5M3.5 2.5h6v6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/></svg></a>
+      <a href="https://www.instagram.com/offnaweek/" target="_blank" rel="noopener">Instagram <svg class="arrow" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 9.5 9.5 2.5M3.5 2.5h6v6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/></svg></a>
       <span class="clock" id="clock">TLV --:--</span>
     </nav>
   </header>
 
+  <!-- 2. HERO — same viewfinder frame as the Members Club card -->
+  <section class="hero" aria-label="OFF/NA">
+    <h1 class="hero__logo logo" data-logo aria-label="OFF/NA">OFF/NA</h1>
+    <div class="frame">
+      <p class="corner tl">Showcasing the next generation of Israeli fashion</p>
+      <p class="corner tr">Runway<br>12.11</p>
+      <p class="corner bl">Israel Canada<br>Fashion Week 2026</p>
+      <a class="corner br" href="#fanzine-section">Fanzine ↓</a>
+    </div>
+  </section>
+
   <main>
-    <!-- 2. THE FANZINE -->
+    <!-- 3. THE FANZINE -->
     <section class="fz-section" id="fanzine-section" aria-label="Runway 12.11 fanzine">
       <div class="fanzine" id="fanzine" data-src="fanzine/" aria-label="OFF/NA Runway 12.11 fanzine">
         <button class="fz-nav fz-prev" type="button" aria-label="Previous page"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 4 7 12l8 8" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/></svg></button>
@@ -36,28 +45,34 @@
         <div class="fz-pop" role="dialog" aria-label="Pieces in this look" hidden></div>
       </div>
       <div class="bar fz-bar">
-        <span class="hint"><span class="hint-long">Click a credit or a look to shop</span><span class="hint-short">Tap to shop</span></span>
+        <span class="hint"><span class="hint-long">Drag to turn · click a look to shop</span><span class="hint-short">Swipe · tap to shop</span></span>
+        <nav class="fz-strip" id="fz-strip" aria-label="Spreads"></nav>
         <span class="clock" id="fz-count">-- / --</span>
       </div>
     </section>
 
-    <!-- 3. ABOUT — edit the text here -->
+    <!-- 4. ABOUT — edit the text here -->
     <section class="about" id="about">
-      <h2 class="label">About</h2>
+      <header class="about__head label"><span>About</span><span>OFF/NA</span></header>
+      <h2 class="about__title">About</h2>
       <div class="about__text">
         <p>OFF/NA is an independent magazine and platform from Tel Aviv for fashion, art and the people who make them.</p>
         <p>For Israel Canada Fashion Week 2026, OFF/NA took the runway to the city: thirty looks by local designers, one walk from Rothschild Boulevard to the sea.</p>
       </div>
+      <nav class="actions">
+        <a class="btn" href="https://www.instagram.com/offnaweek/" target="_blank" rel="noopener"><span>Instagram</span><span><svg class="arrow" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 9.5 9.5 2.5M3.5 2.5h6v6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/></svg></span></a>
+        <a class="btn" href="#fanzine-section"><span>Read the fanzine</span><span>↑</span></a>
+      </nav>
+      <footer class="about__foot label">
+        <span class="logo" data-logo>OFF/NA</span>
+        <span>&copy; 2026</span>
+      </footer>
     </section>
   </main>
-
-  <footer class="bar">
-    <span>OFF/NA &copy; 2026</span>
-    <a href="https://www.instagram.com/offnaweek/" target="_blank" rel="noopener">Instagram <svg class="arrow" width="9" height="9" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 9.5 9.5 2.5M3.5 2.5h6v6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/></svg></a>
-  </footer>
 
   <script src="fanzine/brands.js"></script>
   <script src="fanzine/fanzine.js"></script>
   <script src="main.js"></script>
+  <script src="hero.js"></script>
 </body>
 </html>
