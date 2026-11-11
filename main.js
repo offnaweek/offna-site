@@ -14,3 +14,9 @@ const tick = () => {
 };
 tick();
 setInterval(tick, 10000);
+
+// header height, for the sticky fanzine underneath it
+const head = document.querySelector(".site-head");
+const setHead = () => head && document.documentElement.style.setProperty("--head-h", head.offsetHeight + "px");
+setHead();
+window.addEventListener("resize", setHead);

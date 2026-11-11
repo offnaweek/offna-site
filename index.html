@@ -24,30 +24,28 @@
     </nav>
   </header>
 
-  <!-- 2. HERO — same viewfinder frame as the Members Club card -->
+  <!-- 2. HERO: the logo (liquid, see hero.js) and one line under it -->
   <section class="hero" aria-label="OFF/NA">
     <h1 class="hero__logo logo" data-logo aria-label="OFF/NA">OFF/NA</h1>
-    <div class="frame">
-      <p class="corner tl">Showcasing the next generation of Israeli fashion</p>
-      <p class="corner tr">Runway<br>12.11</p>
-      <p class="corner bl">Israel Canada<br>Fashion Week 2026</p>
-      <a class="corner br" href="#fanzine-section">Fanzine ↓</a>
-    </div>
+    <p class="hero__tagline">Showcasing the next generation of Israeli fashion</p>
   </section>
 
   <main>
     <!-- 3. THE FANZINE -->
     <section class="fz-section" id="fanzine-section" aria-label="Runway 12.11 fanzine">
-      <div class="fanzine" id="fanzine" data-src="fanzine/" aria-label="OFF/NA Runway 12.11 fanzine">
-        <button class="fz-nav fz-prev" type="button" aria-label="Previous page"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 4 7 12l8 8" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/></svg></button>
-        <div class="fz-stage" aria-live="polite"></div>
-        <button class="fz-nav fz-next" type="button" aria-label="Next page"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 4 8 8-8 8" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/></svg></button>
-        <div class="fz-pop" role="dialog" aria-label="Pieces in this look" hidden></div>
-      </div>
-      <div class="bar fz-bar">
-        <span class="hint"><span class="hint-long">Drag to turn · click a look to shop</span><span class="hint-short">Swipe · tap to shop</span></span>
-        <nav class="fz-strip" id="fz-strip" aria-label="Spreads"></nav>
-        <span class="clock" id="fz-count">-- / --</span>
+      <div class="fz-sticky">
+        <div class="fanzine" id="fanzine" data-src="fanzine/" data-cover="fanzine/cover.jpg" aria-label="OFF/NA Runway 12.11 fanzine">
+          <button class="fz-nav fz-prev" type="button" aria-label="Previous page"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 4 7 12l8 8" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/></svg></button>
+          <div class="fz-stage" aria-live="polite"></div>
+          <button class="fz-nav fz-next" type="button" aria-label="Next page"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 4 8 8-8 8" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/></svg></button>
+          <button class="fz-start" type="button">Start flipping <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="square"/></svg></button>
+          <div class="fz-pop" role="dialog" aria-label="Pieces in this look" hidden></div>
+        </div>
+        <div class="bar fz-bar">
+          <span class="hint"><span class="hint-long">Scroll to tip the pages · click a look to shop</span><span class="hint-short">Scroll · tap to shop</span></span>
+          <nav class="fz-strip" id="fz-strip" aria-label="Spreads"></nav>
+          <span class="clock" id="fz-count">-- / --</span>
+        </div>
       </div>
     </section>
 

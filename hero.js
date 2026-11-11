@@ -31,7 +31,7 @@
       vec2 w = vec2(fbm(q*2.2 + vec2(t*0.15, 0.0)), fbm(q*2.2 + vec2(5.2, t*0.12))) - 0.5;
       vec2 f = texture2D(flow, uv).rg - 0.5;
       // intro: big melting warp that settles; always: a slow breathing wobble; cursor: the flow field
-      vec2 d = w * (0.006 + intro * 0.75) + f * 0.34;
+      vec2 d = w * intro * 0.75 + f * 0.34;      // at rest: no warp at all
       d.y += intro * intro * 0.18 * (fbm(vec2(uv.x * 6.0, t)) - 0.2);   // drips down while it pours in
       vec4 c = texture2D(logo, uv - d);
       float a = c.a * smoothstep(1.0, 0.7, intro);
@@ -126,8 +126,9 @@
     }
     last = { x, y };
   };
-  hero.addEventListener("pointermove", stir);
-  hero.addEventListener("pointerleave", () => { last = null; });
+  let over = false, lastMove = 0;
+  hero.addEventListener("pointermove", (e) => { over = true; lastMove = performance.now(); stir(e); });
+  hero.addEventListener("pointerleave", () => { last = null; over = false; });
 
   // ── frame loop (pauses when the hero is off screen) ──
   let start = 0, visible = true, running = false;
@@ -140,8 +141,11 @@
     const k = Math.min(1, t / 3.0);
     const intro = Math.pow(1 - k, 2.4);                 // 1 → 0, eased
     // the liquid settles: fade the field back to rest and soften it
+    // the liquid settles back to the original logo: slowly while you stir, quickly once you leave,
+    // and exactly (no leftover warp) once it has been still for a moment
+    const still = now - lastMove;
     fx.globalCompositeOperation = "source-over";
-    fx.fillStyle = "rgba(128,128,0,0.045)";
+    fx.fillStyle = still > 1400 ? "rgb(128,128,0)" : `rgba(128,128,0,${over ? 0.05 : 0.12})`;
     fx.fillRect(0, 0, FW, FH);
     fx.filter = "blur(1px)";
     fx.drawImage(flow, 0, 0);

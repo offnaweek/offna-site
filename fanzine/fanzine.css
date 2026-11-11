@@ -3,8 +3,8 @@
 .fanzine {
   --page-ratio: 0.7048;          /* page width / height, set from pages.json */
   --arrows: 112px;                /* room for the two arrow buttons */
-  container-type: size;
   min-height: 0;
+  flex: 1;
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;
@@ -13,94 +13,57 @@
 }
 
 .fz-stage {
-  --ph: min(100cqh - 8px, (100cqw - var(--arrows)) / (2 * var(--page-ratio)));
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: 100%;
+  overflow: hidden;
   touch-action: pan-y;
   user-select: none;
   -webkit-user-select: none;
-  cursor: grab;
 }
-.fz-stage:active { cursor: grabbing; }
-.is-single .fz-stage { --ph: min(100cqh - 8px, (100cqw - var(--arrows)) / var(--page-ratio)); }
 
-/* ── the book ───────────────────────────────────────── */
-.fz-book {
-  --n: 2;
-  position: relative;
-  height: var(--ph);
-  width: calc(var(--ph) * var(--page-ratio) * var(--n));
-  perspective: calc(var(--ph) * 3.2);
-  transition: opacity 0.35s, transform 0.35s;
-}
-.is-jumping .fz-book { opacity: 0; transform: scale(0.985); transition: none; }
-
-.fz-slot {
+/* ── the deck: spreads standing on edge, hinged on one floor line ── */
+.fz-scene { position: absolute; inset: 0; transform-style: preserve-3d; }
+.fz-card {
   position: absolute;
-  top: 0;
-  height: 100%;
-  width: calc(100% / var(--n));
-  transition: transform 0.45s cubic-bezier(.2, .7, .2, 1), box-shadow 0.45s;
+  left: 50%;
+  top: var(--fz-top);
+  width: var(--fz-w);
+  height: var(--fz-h);
+  margin-left: calc(var(--fz-w) / -2);
 }
-.fz-slot--l, .fz-slot--solo { left: 0; }
-.fz-slot--r { left: 50%; }
-.fz-slot--solo { width: 100%; }
-
-/* the fold between two pages */
-.fz-slot--l::after, .fz-slot--r::after {
+.fz-card.is-cover { width: var(--fz-pw); margin-left: calc(var(--fz-pw) / -2); }
+.fz-card {
+  display: flex;
+  transform-origin: 50% 100%;
+  transform-style: preserve-3d;
+  backface-visibility: visible;
+  will-change: transform;
+  background: #1a1a1a;
+  box-shadow: 0 0 0 1px rgba(222, 255, 0, 0.12);
+  cursor: pointer;
+}
+.fz-card .fz-page { flex: 1; }
+.fz-card .fz-page + .fz-page::before {     /* the fold */
   content: "";
   position: absolute;
-  top: 0; bottom: 0;
-  width: 7%;
+  top: 0; bottom: 0; left: -10%;
+  width: 20%;
+  background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.22) 50%, transparent);
   pointer-events: none;
   z-index: 1;
 }
-.fz-slot--l::after { right: 0; background: linear-gradient(to left, rgba(0, 0, 0, 0.28), transparent); }
-.fz-slot--r::after { left: 0; background: linear-gradient(to right, rgba(0, 0, 0, 0.22), transparent); }
-
-/* hover a page edge: the corner lifts */
-.peek-next .fz-slot--r { transform: rotateY(-14deg); transform-origin: left center; box-shadow: -18px 0 40px -20px rgba(0, 0, 0, 0.7); }
-.peek-prev .fz-slot--l { transform: rotateY(14deg); transform-origin: right center; box-shadow: 18px 0 40px -20px rgba(0, 0, 0, 0.7); }
-.peek-next .fz-slot--solo { transform: rotateY(-10deg); transform-origin: left center; }
-
-.fz-cast {
+.fz-card__shade {     /* light from above: a spread darkens as it tips away */
   position: absolute;
   inset: 0;
+  background: #000;
+  opacity: var(--shade, 0);
   pointer-events: none;
-  opacity: 0;
-  z-index: 2;
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.1) 60%, transparent);
+  z-index: 3;
 }
-.fz-slot--l .fz-cast { background: linear-gradient(to left, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.1) 60%, transparent); }
+.fz-card:not(.is-front) .fz-hot { pointer-events: none; }
 
-.fz-page { position: relative; width: 100%; height: 100%; margin: 0; background: #1a1a1a; }
+.fz-page { position: relative; height: 100%; margin: 0; background: #1a1a1a; }
 .fz-page img { width: 100%; height: 100%; display: block; object-fit: cover; pointer-events: none; }
-.fz-page--blank { background: #e9e7e2; }
-
-/* the turning page: a front and a back on one hinge */
-.fz-leaf { position: absolute; top: 0; height: 100%; z-index: 4; transform-style: preserve-3d; will-change: transform; }
-.fz-leaf--r { left: 50%; width: 50%; transform-origin: left center; }
-.fz-leaf--l { left: 0; width: 50%; transform-origin: right center; }
-.fz-leaf--solo { left: 0; width: 100%; transform-origin: left center; }
-.fz-face { position: absolute; inset: 0; backface-visibility: hidden; -webkit-backface-visibility: hidden; overflow: hidden; }
-.fz-face--back { transform: rotateY(180deg); }
-.fz-shade {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  opacity: 0;
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.15) 45%, rgba(255, 255, 255, 0.08));
-}
-.fz-leaf--l .fz-face--front .fz-shade,
-.fz-leaf--r .fz-face--back .fz-shade { background: linear-gradient(to left, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.15) 45%, rgba(255, 255, 255, 0.08)); }
-
-/* page edges: hover to peek, click to turn (links above stay clickable) */
-.fz-edge { position: absolute; top: 0; bottom: 0; width: 7%; z-index: 3; border: 0; padding: 0; background: none; cursor: pointer; }
-.fz-edge--next { right: 0; }
-.fz-edge--prev { left: 0; }
 
 /* invisible links; a quiet hint on hover / keyboard focus */
 .fz-hot { position: absolute; display: block; border: 0; padding: 0; background: transparent; cursor: pointer; }
@@ -254,6 +217,34 @@
   .fz-tick[aria-current="true"] { height: 12px; }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .fz-slot, .fz-book { transition: none; }
+
+
+/* "Start flipping": beside the cover, gone once the first page tips */
+.fz-start {
+  position: absolute;
+  z-index: 5;
+  left: calc(50% + var(--fz-pw) / 2 + clamp(16px, 3vw, 40px));
+  top: calc(var(--fz-top) + var(--fz-h) * 0.5);
+  translate: 0 -50%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 56px;
+  padding: 0 18px;
+  border: var(--rule) solid var(--volt);
+  background: var(--volt);
+  color: var(--ink);
+  font: 700 18px/1 var(--sans);
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: opacity 0.3s, background 0.15s, color 0.15s;
 }
+.fz-start svg { width: 22px; height: 22px; animation: nudge 1.4s ease-in-out infinite; }
+.fz-start:hover, .fz-start:focus-visible { background: var(--ink); color: var(--volt); outline: none; }
+.fz-start.is-gone { opacity: 0; pointer-events: none; }
+@keyframes nudge { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(6px); } }
+@media (max-width: 760px) {
+  .fz-start { left: 50%; top: auto; bottom: 8px; translate: -50% 0; min-height: 48px; font-size: 15px; }
+}
+@media (prefers-reduced-motion: reduce) { .fz-start svg { animation: none; } }
