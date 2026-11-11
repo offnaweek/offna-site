@@ -171,8 +171,9 @@
     e.className = "fz-edge fz-edge--" + (dir > 0 ? "next" : "prev");
     e.tabIndex = -1;
     e.setAttribute("aria-hidden", "true");
-    e.addEventListener("mouseenter", () => book && book.classList.add(dir > 0 ? "peek-next" : "peek-prev"));
-    e.addEventListener("mouseleave", () => book && book.classList.remove("peek-next", "peek-prev"));
+    // lift the corner only for a real mouse (on touch the hover would stick after a tap)
+    e.addEventListener("pointerenter", (ev) => { if (ev.pointerType === "mouse" && book) book.classList.add(dir > 0 ? "peek-next" : "peek-prev"); });
+    e.addEventListener("pointerleave", () => book && book.classList.remove("peek-next", "peek-prev"));
     e.addEventListener("click", () => { if (!dragged) turn(dir); });
     return e;
   }
