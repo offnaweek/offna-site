@@ -141,12 +141,11 @@ body {
   letter-spacing: -0.025em;
   margin-bottom: clamp(12px, 2vw, 32px);
 }
-/* desktop: the whole text starts on the same line as the "Read the fanzine" button
-   (the second of the two buttons below: half the width plus half the 10px gap) */
+/* desktop: the lead on the left; the body text starts on the same line as the "Read the fanzine" button */
 @media (min-width: 640px) {
-  .about__text { grid-template-columns: 1fr; padding-left: calc(50% + 5px); }
-  .about__text p, .about__text p:first-child { grid-column: 1; }
-  .about__text p:first-child { font-size: clamp(22px, 2.5vw, 36px); max-width: 20em; }
+  .about__text { grid-template-columns: 1fr 1fr; column-gap: 10px; }      /* same split as the buttons */
+  .about__text p { grid-column: 2; }
+  .about__text p:first-child { grid-column: 1 / -1; font-size: clamp(22px, 2.8vw, 40px); max-width: 22em; }   /* the lead stays on the left */
 }
 @media (max-width: 639px) {
   .about__text p, .about__text p:first-child { grid-column: 1 / -1; }
