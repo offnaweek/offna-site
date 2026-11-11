@@ -2,58 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta http-equiv="Cache-Control" content="no-cache">
-  <meta name="theme-color" content="#000000">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex">
-  <title>OFF/NA Members Club</title>
-  <link rel="icon" href="../assets/logo.svg" type="image/svg+xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="club.css?v=3">
+  <title>OFF/NA</title>
+  <!-- The NFC cards point here (offnaweek.com/club/). They now open the home page with the fanzine.
+       The Members Club page itself lives on at /members/. -->
+  <meta http-equiv="refresh" content="0; url=/">
+  <script>location.replace("/" + location.hash);</script>
+  <style>body { background: #000; }</style>
 </head>
-<body>
-  <!-- Screen 1: the card front (photo + logo) seen through the viewfinder -->
-  <section class="finder" id="top">
-    <img class="finder__img" id="d-image" alt="">
-    <div class="finder__logo logo" data-logo aria-hidden="true"></div>
-    <div class="frame">
-      <p class="corner tl" id="d-kicker"></p>
-      <p class="corner tr" id="d-date"></p>
-      <p class="corner bl">Members Club<br>2026–2027</p>
-      <p class="corner br" id="d-time"></p>
-      <div class="scale" aria-hidden="true"></div>
-    </div>
-    <a class="scroll-cue" href="#drop">Drop <span id="d-num"></span> ↓</a>
-  </section>
-
-  <!-- Screen 2: the details, on card yellow -->
-  <section class="drop" id="drop">
-    <header class="drop__head">
-      <p class="label">Drop <span data-num></span></p>
-      <p class="label" id="d-countdown"></p>
-    </header>
-
-    <h1 class="drop__title" id="d-title"></h1>
-
-    <dl class="facts">
-      <div id="f-date"><dt>Date</dt><dd></dd></div>
-      <div id="f-time"><dt>Time</dt><dd></dd></div>
-      <div id="f-place"><dt>Place</dt><dd></dd></div>
-    </dl>
-
-    <p class="drop__text" id="d-text"></p>
-
-    <nav class="actions" id="d-links"></nav>
-
-    <footer class="drop__foot">
-      <span class="logo" data-logo></span>
-      <span>Tap again for the next drop</span>
-    </footer>
-  </section>
-
-  <script src="drop.js?v=3"></script>
-  <script src="club.js?v=5"></script>
-</body>
+<body></body>
 </html>
