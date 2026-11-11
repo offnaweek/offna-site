@@ -147,3 +147,6 @@
   .fz-nav { width: 36px; }
   .fz-nav svg { width: 18px; height: 18px; }
 }
+
+/* credit links sit above the figure area where the two overlap */
+.fz-credit { z-index: 2; }
