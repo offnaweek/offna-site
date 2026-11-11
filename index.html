@@ -13,23 +13,46 @@
   <link rel="stylesheet" href="fanzine/fanzine.css">
 </head>
 <body>
-  <header class="bar">
-    <span>OFF/NA</span>
-    <span class="clock" id="clock">TLV --:--</span>
+  <!-- 1. HEADER -->
+  <header class="bar site-head">
+    <a class="head-logo" href="./" aria-label="OFF/NA, home">
+      <img src="assets/logo.svg" alt="OFF/NA" id="logo-fallback">
+    </a>
+    <nav class="head-nav" aria-label="Site">
+      <a href="#fanzine-section">Fanzine</a>
+      <a href="#about">About</a>
+      <a href="https://www.instagram.com/offnaweek/" target="_blank" rel="noopener">Instagram <svg class="arrow" width="9" height="9" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 9.5 9.5 2.5M3.5 2.5h6v6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/></svg></a>
+      <span class="clock" id="clock">TLV --:--</span>
+    </nav>
   </header>
 
-  <!-- The fanzine. Pages + link positions: fanzine/pages.json · brand links: fanzine/brands.js
-       To open on a cover first, add data-cover="fanzine/cover.jpg" below. -->
-  <main class="fanzine" id="fanzine" data-src="fanzine/" aria-label="OFF/NA Runway 12.11 fanzine">
-    <button class="fz-nav fz-prev" type="button" aria-label="Previous page"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 4 7 12l8 8" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/></svg></button>
-    <div class="fz-stage" aria-live="polite"></div>
-    <button class="fz-nav fz-next" type="button" aria-label="Next page"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 4 8 8-8 8" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/></svg></button>
-    <div class="fz-pop" role="dialog" aria-label="Pieces in this look" hidden></div>
+  <main>
+    <!-- 2. THE FANZINE -->
+    <section class="fz-section" id="fanzine-section" aria-label="Runway 12.11 fanzine">
+      <div class="fanzine" id="fanzine" data-src="fanzine/" aria-label="OFF/NA Runway 12.11 fanzine">
+        <button class="fz-nav fz-prev" type="button" aria-label="Previous page"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 4 7 12l8 8" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/></svg></button>
+        <div class="fz-stage" aria-live="polite"></div>
+        <button class="fz-nav fz-next" type="button" aria-label="Next page"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 4 8 8-8 8" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/></svg></button>
+        <div class="fz-pop" role="dialog" aria-label="Pieces in this look" hidden></div>
+      </div>
+      <div class="bar fz-bar">
+        <span class="hint"><span class="hint-long">Click a credit or a look to shop</span><span class="hint-short">Tap to shop</span></span>
+        <span class="clock" id="fz-count">-- / --</span>
+      </div>
+    </section>
+
+    <!-- 3. ABOUT — edit the text here -->
+    <section class="about" id="about">
+      <h2 class="label">About</h2>
+      <div class="about__text">
+        <p>OFF/NA is an independent magazine and platform from Tel Aviv for fashion, art and the people who make them.</p>
+        <p>For Israel Canada Fashion Week 2026, OFF/NA took the runway to the city: thirty looks by local designers, one walk from Rothschild Boulevard to the sea.</p>
+      </div>
+    </section>
   </main>
 
   <footer class="bar">
-    <span class="hint"><span class="hint-long">Click a credit or a look to shop</span><span class="hint-short">Tap to shop</span></span>
-    <span class="clock" id="fz-count">-- / --</span>
+    <span>OFF/NA &copy; 2026</span>
     <a href="https://www.instagram.com/offnaweek/" target="_blank" rel="noopener">Instagram <svg class="arrow" width="9" height="9" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 9.5 9.5 2.5M3.5 2.5h6v6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/></svg></a>
   </footer>
 
