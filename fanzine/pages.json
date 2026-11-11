@@ -1,0 +1,1498 @@
+{
+ "pageSize": [
+  148,
+  210
+ ],
+ "preview": true,
+ "pages": [
+  {
+   "file": "pages/01.jpg",
+   "look": "",
+   "figure": null,
+   "credits": []
+  },
+  {
+   "file": "pages/02.jpg",
+   "look": "01",
+   "figure": [
+    0.4886,
+    0.2839,
+    0.9314,
+    0.9435
+   ],
+   "credits": [
+    {
+     "text": "Dress — MISHIMONO",
+     "box": [
+      0.0686,
+      0.7008,
+      0.4462,
+      0.725
+     ]
+    },
+    {
+     "text": "Jewelry — RITUAL",
+     "box": [
+      0.0686,
+      0.725,
+      0.4462,
+      0.7492
+     ]
+    },
+    {
+     "text": "Bag — AURA TO GO",
+     "box": [
+      0.0686,
+      0.7492,
+      0.4462,
+      0.7734
+     ]
+    },
+    {
+     "text": "Nails — LIHI EDWARDS",
+     "box": [
+      0.0686,
+      0.7734,
+      0.4462,
+      0.7976
+     ]
+    }
+   ]
+  },
+  {
+   "file": "pages/03.jpg",
+   "look": "02",
+   "figure": [
+    0.0686,
+    0.2839,
+    0.4554,
+    0.9435
+   ],
+   "credits": [
+    {
+     "text": "Top — OMER ASH",
+     "box": [
+      0.5538,
+      0.6887,
+      0.9314,
+      0.7129
+     ]
+    },
+    {
+     "text": "Leggings — NEVERAGAIN",
+     "box": [
+      0.5538,
+      0.7129,
+      0.9314,
+      0.7371
+     ]
+    },
+    {
+     "text": "Bag & Charms — RITUAL",
+     "box": [
+      0.5538,
+      0.7371,
+      0.9314,
+      0.7613
+     ]
+    },
+    {
+     "text": "Swimsuit — DM BIKINIS",
+     "box": [
+      0.5538,
+      0.7613,
+      0.9314,
+      0.7855
+     ]
+    },
+    {
+     "text": "Nails — LIHI EDWARDS",
+     "box": [
+      0.5538,
+      0.7855,
+      0.9314,
+      0.8097
+     ]
+    }
+   ]
+  },
+  {
+   "file": "pages/04.jpg",
+   "look": "03",
+   "figure": [
+    0.5492,
+    0.2839,
+    0.9314,
+    0.9435
+   ],
+   "credits": [
+    {
+     "text": "Tank Top — TOSHKA",
+     "box": [
+      0.0686,
+      0.7008,
+      0.4462,
+      0.725
+     ]
+    },
+    {
+     "text": "Pants — CHILD.ISH CULTURE",
+     "box": [
+      0.0686,
+      0.725,
+      0.4462,
+      0.7492
+     ]
+    },
+    {
+     "text": "Jewelry — ORI TAMIR",
+     "box": [
+      0.0686,
+      0.7492,
+      0.4462,
+      0.7734
+     ]
+    },
+    {
+     "text": "Shoes — FRANCO BANE",
+     "box": [
+      0.0686,
+      0.7734,
+      0.4462,
+      0.7976
+     ]
+    }
+   ]
+  },
+  {
+   "file": "pages/05.jpg",
+   "look": "04",
+   "figure": [
+    0.0686,
+    0.2839,
+    0.3913,
+    0.9435
+   ],
+   "credits": [
+    {
+     "text": "Bra — VLADA BOUTIQUE",
+     "box": [
+      0.5538,
+      0.7008,
+      0.9314,
+      0.725
+     ]
+    },
+    {
+     "text": "Skirt — MAYA SHAKED",
+     "box": [
+      0.5538,
+      0.725,
+      0.9314,
+      0.7492
+     ]
+    },
+    {
+     "text": "Shirt — YUCCA & OLALA",
+     "box": [
+      0.5538,
+      0.7492,
+      0.9314,
+      0.7734
+     ]
+    },
+    {
+     "text": "Necklace — RITUAL",
+     "box": [
+      0.5538,
+      0.7734,
+      0.9314,
+      0.7976
+     ]
+    }
+   ]
+  },
+  {
+   "file": "pages/06.jpg",
+   "look": "05",
+   "figure": [
+    0.5561,
+    0.2839,
+    0.9314,
+    0.9435
+   ],
+   "credits": [
+    {
+     "text": "Dress — ELYA MAOR",
+     "box": [
+      0.0686,
+      0.7129,
+      0.4462,
+      0.7371
+     ]
+    },
+    {
+     "text": "Bracelet & Heels — AURA TO GO",
+     "box": [
+      0.0686,
+      0.7371,
+      0.4462,
+      0.7613
+     ]
+    },
+    {
+     "text": "Nails — LIHI EDWARDS",
+     "box": [
+      0.0686,
+      0.7613,
+      0.4462,
+      0.7855
+     ]
+    }
+   ]
+  },
+  {
+   "file": "pages/07.jpg",
+   "look": "06",
+   "figure": [
+    0.0686,
+    0.2839,
+    0.4119,
+    0.9435
+   ],
+   "credits": [
+    {
+     "text": "Dress — MAYA SHAKED",
+     "box": [
+      0.5538,
+      0.7008,
+      0.9314,
+      0.725
+     ]
+    },
+    {
+     "text": "Bra — VLADA BOUTIQUE",
+     "box": [
+      0.5538,
+      0.725,
+      0.9314,
+      0.7492
+     ]
+    },
+    {
+     "text": "Jewelry — RITUAL",
+     "box": [
+      0.5538,
+      0.7492,
+      0.9314,
+      0.7734
+     ]
+    },
+    {
+     "text": "Nails — LIHI EDWARDS",
+     "box": [
+      0.5538,
+      0.7734,
+      0.9314,
+      0.7976
+     ]
+    }
+   ]
+  },
+  {
+   "file": "pages/08.jpg",
+   "look": "07",
+   "figure": [
+    0.5892,
+    0.2839,
+    0.9314,
+    0.9435
+   ],
+   "credits": [
+    {
+     "text": "Top & Bag — TENDER HEART",
+     "box": [
+      0.0686,
+      0.6766,
+      0.4462,
+      0.7008
+     ]
+    },
+    {
+     "text": "Skirt — KATZ",
+     "box": [
+      0.0686,
+      0.7008,
+      0.4462,
+      0.725
+     ]
+    },
+    {
+     "text": "Bracelet & Ring — SOMEONE OBJECTS",
+     "box": [
+      0.0686,
+      0.725,
+      0.4462,
+      0.7492
+     ]
+    },
+    {
+     "text": "Necklace — RITUAL",
+     "box": [
+      0.0686,
+      0.7492,
+      0.4462,
+      0.7734
+     ]
+    },
+    {
+     "text": "Ballet Flats — DAFIX",
+     "box": [
+      0.0686,
+      0.7734,
+      0.4462,
+      0.7976
+     ]
+    },
+    {
+     "text": "Nails — LIHI EDWARDS",
+     "box": [
+      0.0686,
+      0.7976,
+      0.4462,
+      0.8218
+     ]
+    }
+   ]
+  },
+  {
+   "file": "pages/09.jpg",
+   "look": "08",
+   "figure": [
+    0.0686,
+    0.2839,
+    0.4188,
+    0.9435
+   ],
+   "credits": [
+    {
+     "text": "Jacket — TOSHKA",
+     "box": [
+      0.5538,
+      0.6887,
+      0.9314,
+      0.7129
+     ]
+    },
+    {
+     "text": "Skirt — MISHIMONO",
+     "box": [
+      0.5538,
+      0.7129,
+      0.9314,
+      0.7371
+     ]
+    },
+    {
+     "text": "Necklace — ILAN NAHUM",
+     "box": [
+      0.5538,
+      0.7371,
+      0.9314,
+      0.7613
+     ]
+    },
+    {
+     "text": "Accessories & Shoes — AURA TO GO",
+     "box": [
+      0.5538,
+      0.7613,
+      0.9314,
+      0.7855
+     ]
+    },
+    {
+     "text": "Nails — LIHI EDWARDS",
+     "box": [
+      0.5538,
+      0.7855,
+      0.9314,
+      0.8097
+     ]
+    }
+   ]
+  },
+  {
+   "file": "pages/10.jpg",
+   "look": "09",
+   "figure": [
+    0.5343,
+    0.2839,
+    0.9314,
+    0.9435
+   ],
+   "credits": [
+    {
+     "text": "Jacket — TOSHKA",
+     "box": [
+      0.0686,
+      0.6887,
+      0.4462,
+      0.7129
+     ]
+    },
+    {
+     "text": "Pants — HAGOMEL",
+     "box": [
+      0.0686,
+      0.7129,
+      0.4462,
+      0.7371
+     ]
+    },
+    {
+     "text": "Top — TZELLEM",
+     "box": [
+      0.0686,
+      0.7371,
+      0.4462,
+      0.7613
+     ]
+    },
+    {
+     "text": "Hat — SHEKEL KLAN",
+     "box": [
+      0.0686,
+      0.7613,
+      0.4462,
+      0.7855
+     ]
+    },
+    {
+     "text": "Jewelry — ORI TAMIR",
+     "box": [
+      0.0686,
+      0.7855,
+      0.4462,
+      0.8097
+     ]
+    }
+   ]
+  },
+  {
+   "file": "pages/11.jpg",
+   "look": "10",
+   "figure": [
+    0.0686,
+    0.2839,
+    0.4794,
+    0.9435
+   ],
+   "credits": [
+    {
+     "text": "Button-Down Shirt & Jacket — LEFT A MESS",
+     "box": [
+      0.5538,
+      0.6887,
+      0.9314,
+      0.7129
+     ]
+    },
+    {
+     "text": "Pants — ANDROLOMUSIA",
+     "box": [
+      0.5538,
+      0.7129,
+      0.9314,
+      0.7371
+     ]
+    },
+    {
+     "text": "Belt — YUCCA & OLALA",
+     "box": [
+      0.5538,
+      0.7371,
+      0.9314,
+      0.7613
+     ]
+    },
+    {
+     "text": "Headscarf — NOA YONA",
+     "box": [
+      0.5538,
+      0.7613,
+      0.9314,
+      0.7855
+     ]
+    },
+    {
+     "text": "Shoes — FRANCO BANE",
+     "box": [
+      0.5538,
+      0.7855,
+      0.9314,
+      0.8097
+     ]
+    }
+   ]
+  },
+  {
+   "file": "pages/12.jpg",
+   "look": "11",
+   "figure": null,
+   "credits": [
+    {
+     "text": "Dress — TZELLEM",
+     "box": [
+      0.0686,
+      0.7129,
+      0.4462,
+      0.7371
+     ]
+    },
+    {
+     "text": "Necklace — ILAN NAHUM",
+     "box": [
+      0.0686,
+      0.7371,
+      0.4462,
+      0.7613
+     ]
+    },
+    {
+     "text": "Bag — AURA TO GO",
+     "box": [
+      0.0686,
+      0.7613,
+      0.4462,
+      0.7855
+     ]
+    }
+   ]
+  },
+  {
+   "file": "pages/13.jpg",
+   "look": "12",
+   "figure": [
+    0.0686,
+    0.2839,
+    0.5172,
+    0.9435
+   ],
+   "credits": [
+    {
+     "text": "Shirt — YUCCA & OLALA",
+     "box": [
+      0.5538,
+      0.7129,
+      0.9314,
+      0.7371
+     ]
+    },
+    {
+     "text": "Bra — VLADA BOUTIQUE",
+     "box": [
+      0.5538,
+      0.7371,
+      0.9314,
+      0.7613
+     ]
+    },
+    {
+     "text": "Skirt — KATZ",
+     "box": [
+      0.5538,
+      0.7613,
+      0.9314,
+      0.7855
+     ]
+    }
+   ]
+  },
+  {
+   "file": "pages/14.jpg",
+   "look": "12",
+   "figure": [
+    0.4451,
+    0.2839,
+    0.9314,
+    0.9435
+   ],
+   "credits": [
+    {
+     "text": "Dress — KATZ",
+     "box": [
+      0.0686,
+      0.725,
+      0.4462,
+      0.7492
+     ]
+    },
+    {
+     "text": "Gray Top — HIDE & SEEK",
+     "box": [
+      0.0686,
+      0.7492,
+      0.4462,
+      0.7734
+     ]
+    }
+   ]
+  },
+  {
+   "file": "pages/15.jpg",
+   "look": "13",
+   "figure": [
+    0.0686,
+    0.2839,
+    0.4268,
+    0.9435
+   ],
+   "credits": [
+    {
+     "text": "Top — HIDE & SEEK",
+     "box": [
+      0.5538,
+      0.6645,
+      0.9314,
+      0.6887
+     ]
+    },
+    {
+     "text": "Skirt — MAYA SHAKED",
+     "box": [
+      0.5538,
+      0.6887,
+      0.9314,
+      0.7129
+     ]
+    },
+    {
+     "text": "Earring — ZOE MELANKER",
+     "box": [
+      0.5538,
+      0.7129,
+      0.9314,
+      0.7371
+     ]
+    },
+    {
+     "text": "Flower Bouquet — MOKHOVART",
+     "box": [
+      0.5538,
+      0.7371,
+      0.9314,
+      0.7613
+     ]
+    },
+    {
+     "text": "Shoes — TENDER HEART",
+     "box": [
+      0.5538,
+      0.7613,
+      0.9314,
+      0.7855
+     ]
+    },
+    {
+     "text": "Belt — AURA TO GO",
+     "box": [
+      0.5538,
+      0.7855,
+      0.9314,
+      0.8097
+     ]
+    },
+    {
+     "text": "Nails — LIHI EDWARDS",
+     "box": [
+      0.5538,
+      0.8097,
+      0.9314,
+      0.8339
+     ]
+    }
+   ]
+  },
+  {
+   "file": "pages/16.jpg",
+   "look": "14",
+   "figure": [
+    0.5137,
+    0.2839,
+    0.9314,
+    0.9435
+   ],
+   "credits": [
+    {
+     "text": "Top — HIDE & SEEK",
+     "box": [
+      0.0686,
+      0.7008,
+      0.4462,
+      0.725
+     ]
+    },
+    {
+     "text": "Pants — LYD",
+     "box": [
+      0.0686,
+      0.725,
+      0.4462,
+      0.7492
+     ]
+    },
+    {
+     "text": "Earrings — RITUAL",
+     "box": [
+      0.0686,
+      0.7492,
+      0.4462,
+      0.7734
+     ]
+    },
+    {
+     "text": "Bag — AURA TO GO",
+     "box": [
+      0.0686,
+      0.7734,
+      0.4462,
+      0.7976
+     ]
+    }
+   ]
+  },
+  {
+   "file": "pages/17.jpg",
+   "look": "15",
+   "figure": [
+    0.0686,
+    0.2839,
+    0.4691,
+    0.9435
+   ],
+   "credits": [
+    {
+     "text": "Pants — SHEKEL KLAN",
+     "box": [
+      0.5538,
+      0.7008,
+      0.9314,
+      0.725
+     ]
+    },
+    {
+     "text": "Shirt — HAGOMEL",
+     "box": [
+      0.5538,
+      0.725,
+      0.9314,
+      0.7492
+     ]
+    },
+    {
+     "text": "Jewelry — ORI TAMIR",
+     "box": [
+      0.5538,
+      0.7492,
+      0.9314,
+      0.7734
+     ]
+    },
+    {
+     "text": "Joint / Prop — MARGO",
+     "box": [
+      0.5538,
+      0.7734,
+      0.9314,
+      0.7976
+     ]
+    }
+   ]
+  },
+  {
+   "file": "pages/18.jpg",
+   "look": "16",
+   "figure": [
+    0.5686,
+    0.2839,
+    0.9314,
+    0.9435
+   ],
+   "credits": [
+    {
+     "text": "Top — HAHOMEL",
+     "box": [
+      0.0686,
+      0.6766,
+      0.4462,
+      0.7008
+     ]
+    },
+    {
+     "text": "Pants — ANDROLOMUSIA",
+     "box": [
+      0.0686,
+      0.7008,
+      0.4462,
+      0.725
+     ]
+    },
+    {
+     "text": "Jewelry — ORI TAMIR",
+     "box": [
+      0.0686,
+      0.725,
+      0.4462,
+      0.7492
+     ]
+    },
+    {
+     "text": "Belt — YUCCA & OLALA",
+     "box": [
+      0.0686,
+      0.7492,
+      0.4462,
+      0.7734
+     ]
+    },
+    {
+     "text": "Headscarf — NOA YONA",
+     "box": [
+      0.0686,
+      0.7734,
+      0.4462,
+      0.7976
+     ]
+    },
+    {
+     "text": "Shoes — FRANCO BANE",
+     "box": [
+      0.0686,
+      0.7976,
+      0.4462,
+      0.8218
+     ]
+    }
+   ]
+  },
+  {
+   "file": "pages/19.jpg",
+   "look": "17",
+   "figure": [
+    0.0686,
+    0.2839,
+    0.405,
+    0.9435
+   ],
+   "credits": [
+    {
+     "text": "Top & Pants — NOON",
+     "box": [
+      0.5538,
+      0.725,
+      0.9314,
+      0.7492
+     ]
+    },
+    {
+     "text": "Necklace — AURA TO GO",
+     "box": [
+      0.5538,
+      0.7492,
+      0.9314,
+      0.7734
+     ]
+    }
+   ]
+  },
+  {
+   "file": "pages/20.jpg",
+   "look": "18",
+   "figure": [
+    0.4794,
+    0.2839,
+    0.9314,
+    0.9435
+   ],
+   "credits": [
+    {
+     "text": "Top, Jacket, Pants & Hat — TENDER HEART",
+     "box": [
+      0.0686,
+      0.7129,
+      0.4462,
+      0.7371
+     ]
+    },
+    {
+     "text": "Bag — SWIT",
+     "box": [
+      0.0686,
+      0.7371,
+      0.4462,
+      0.7613
+     ]
+    },
+    {
+     "text": "Nails — LIHI EDWARDS",
+     "box": [
+      0.0686,
+      0.7613,
+      0.4462,
+      0.7855
+     ]
+    }
+   ]
+  },
+  {
+   "file": "pages/21.jpg",
+   "look": "19",
+   "figure": [
+    0.0686,
+    0.2839,
+    0.4279,
+    0.9435
+   ],
+   "credits": [
+    {
+     "text": "Top — TZELLEM",
+     "box": [
+      0.5538,
+      0.7008,
+      0.9314,
+      0.725
+     ]
+    },
+    {
+     "text": "Pants & Necklaces — TOSHKA",
+     "box": [
+      0.5538,
+      0.725,
+      0.9314,
+      0.7492
+     ]
+    },
+    {
+     "text": "Shoes — FRANCO BANE",
+     "box": [
+      0.5538,
+      0.7492,
+      0.9314,
+      0.7734
+     ]
+    },
+    {
+     "text": "Belt — YUCCA & OLALA",
+     "box": [
+      0.5538,
+      0.7734,
+      0.9314,
+      0.7976
+     ]
+    }
+   ]
+  },
+  {
+   "file": "pages/22.jpg",
+   "look": "20",
+   "figure": [
+    0.5378,
+    0.2839,
+    0.9314,
+    0.9435
+   ],
+   "credits": [
+    {
+     "text": "Coat & Pants — TOSHKA",
+     "box": [
+      0.0686,
+      0.7008,
+      0.4462,
+      0.725
+     ]
+    },
+    {
+     "text": "Hat — ANDROLOMUSIA",
+     "box": [
+      0.0686,
+      0.725,
+      0.4462,
+      0.7492
+     ]
+    },
+    {
+     "text": "Necklace — ILAN NAHUM",
+     "box": [
+      0.0686,
+      0.7492,
+      0.4462,
+      0.7734
+     ]
+    },
+    {
+     "text": "Bracelet — RITUAL",
+     "box": [
+      0.0686,
+      0.7734,
+      0.4462,
+      0.7976
+     ]
+    }
+   ]
+  },
+  {
+   "file": "pages/23.jpg",
+   "look": "21",
+   "figure": [
+    0.0686,
+    0.2839,
+    0.3924,
+    0.9435
+   ],
+   "credits": [
+    {
+     "text": "Top — HIDE & SEEK",
+     "box": [
+      0.5538,
+      0.6766,
+      0.9314,
+      0.7008
+     ]
+    },
+    {
+     "text": "Pants — ANDROLOMUSIA",
+     "box": [
+      0.5538,
+      0.7008,
+      0.9314,
+      0.725
+     ]
+    },
+    {
+     "text": "Bra — MISHIMONO",
+     "box": [
+      0.5538,
+      0.725,
+      0.9314,
+      0.7492
+     ]
+    },
+    {
+     "text": "Shoes — FRANCO BANE",
+     "box": [
+      0.5538,
+      0.7492,
+      0.9314,
+      0.7734
+     ]
+    },
+    {
+     "text": "Hand Jewelry — ZOE MELANKER",
+     "box": [
+      0.5538,
+      0.7734,
+      0.9314,
+      0.7976
+     ]
+    },
+    {
+     "text": "Bag — AURA TO GO",
+     "box": [
+      0.5538,
+      0.7976,
+      0.9314,
+      0.8218
+     ]
+    }
+   ]
+  },
+  {
+   "file": "pages/24.jpg",
+   "look": "22",
+   "figure": [
+    0.5263,
+    0.2839,
+    0.9314,
+    0.9435
+   ],
+   "credits": [
+    {
+     "text": "Tank Top & Pants — TOSHKA",
+     "box": [
+      0.0686,
+      0.725,
+      0.4462,
+      0.7492
+     ]
+    },
+    {
+     "text": "Hat — TENDER HEART",
+     "box": [
+      0.0686,
+      0.7492,
+      0.4462,
+      0.7734
+     ]
+    }
+   ]
+  },
+  {
+   "file": "pages/25.jpg",
+   "look": "23",
+   "figure": [
+    0.0686,
+    0.2839,
+    0.4725,
+    0.9435
+   ],
+   "credits": [
+    {
+     "text": "Pants, Earring, Alien Necklace & Bag — ULTRA",
+     "box": [
+      0.5538,
+      0.725,
+      0.9314,
+      0.7492
+     ]
+    },
+    {
+     "text": "Choker — ILAN NAHUM",
+     "box": [
+      0.5538,
+      0.7492,
+      0.9314,
+      0.7734
+     ]
+    }
+   ]
+  },
+  {
+   "file": "pages/26.jpg",
+   "look": "24",
+   "figure": [
+    0.5149,
+    0.2839,
+    0.9314,
+    0.9435
+   ],
+   "credits": [
+    {
+     "text": "Green Military Jacket — TOSHKA",
+     "box": [
+      0.0686,
+      0.7008,
+      0.4462,
+      0.725
+     ]
+    },
+    {
+     "text": "Top — TZELLEM",
+     "box": [
+      0.0686,
+      0.725,
+      0.4462,
+      0.7492
+     ]
+    },
+    {
+     "text": "Pants — SHEKEL KLAN",
+     "box": [
+      0.0686,
+      0.7492,
+      0.4462,
+      0.7734
+     ]
+    },
+    {
+     "text": "Belt — ANDROLOMUSIA",
+     "box": [
+      0.0686,
+      0.7734,
+      0.4462,
+      0.7976
+     ]
+    }
+   ]
+  },
+  {
+   "file": "pages/27.jpg",
+   "look": "25",
+   "figure": [
+    0.0686,
+    0.2839,
+    0.5481,
+    0.9435
+   ],
+   "credits": [
+    {
+     "text": "Dress — JETSKI",
+     "box": [
+      0.5538,
+      0.6887,
+      0.9314,
+      0.7129
+     ]
+    },
+    {
+     "text": "Swimsuit — DM BIKINIS",
+     "box": [
+      0.5538,
+      0.7129,
+      0.9314,
+      0.7371
+     ]
+    },
+    {
+     "text": "Bracelet — SOMEONE OBJECTS",
+     "box": [
+      0.5538,
+      0.7371,
+      0.9314,
+      0.7613
+     ]
+    },
+    {
+     "text": "Bag — RITUAL",
+     "box": [
+      0.5538,
+      0.7613,
+      0.9314,
+      0.7855
+     ]
+    },
+    {
+     "text": "Nails — LIHI EDWARDS",
+     "box": [
+      0.5538,
+      0.7855,
+      0.9314,
+      0.8097
+     ]
+    }
+   ]
+  },
+  {
+   "file": "pages/28.jpg",
+   "look": "26",
+   "figure": [
+    0.4348,
+    0.2839,
+    0.9314,
+    0.9435
+   ],
+   "credits": [
+    {
+     "text": "Swimsuit — ULTRA",
+     "box": [
+      0.0686,
+      0.7129,
+      0.4462,
+      0.7371
+     ]
+    },
+    {
+     "text": "Fish Necklace — ERAN ART",
+     "box": [
+      0.0686,
+      0.7371,
+      0.4462,
+      0.7613
+     ]
+    },
+    {
+     "text": "Shoes — FRANCO BANE",
+     "box": [
+      0.0686,
+      0.7613,
+      0.4462,
+      0.7855
+     ]
+    }
+   ]
+  },
+  {
+   "file": "pages/29.jpg",
+   "look": "27",
+   "figure": [
+    0.0686,
+    0.2839,
+    0.611,
+    0.9435
+   ],
+   "credits": [
+    {
+     "text": "Top, Pants & Weightlifting Strap — ULTRA",
+     "box": [
+      0.5538,
+      0.7129,
+      0.9314,
+      0.7371
+     ]
+    },
+    {
+     "text": "Shoes — FRANCO BANE",
+     "box": [
+      0.5538,
+      0.7371,
+      0.9314,
+      0.7613
+     ]
+    },
+    {
+     "text": "Sunglasses & Gloves — AURA TO GO",
+     "box": [
+      0.5538,
+      0.7613,
+      0.9314,
+      0.7855
+     ]
+    }
+   ]
+  },
+  {
+   "file": "pages/30.jpg",
+   "look": "28",
+   "figure": [
+    0.6098,
+    0.2839,
+    0.9314,
+    0.9435
+   ],
+   "credits": [
+    {
+     "text": "Leopard Set — MAYA SHAKED",
+     "box": [
+      0.0686,
+      0.7008,
+      0.4462,
+      0.725
+     ]
+    },
+    {
+     "text": "Red Bra — VLADA BOUTIQUE",
+     "box": [
+      0.0686,
+      0.725,
+      0.4462,
+      0.7492
+     ]
+    },
+    {
+     "text": "Jewelry — AURA TO GO",
+     "box": [
+      0.0686,
+      0.7492,
+      0.4462,
+      0.7734
+     ]
+    },
+    {
+     "text": "Nails — LIHI EDWARDS",
+     "box": [
+      0.0686,
+      0.7734,
+      0.4462,
+      0.7976
+     ]
+    }
+   ]
+  },
+  {
+   "file": "pages/31.jpg",
+   "look": "29",
+   "figure": [
+    0.0686,
+    0.2839,
+    0.4485,
+    0.9435
+   ],
+   "credits": [
+    {
+     "text": "Dress — MISHIMONO",
+     "box": [
+      0.5538,
+      0.7008,
+      0.9314,
+      0.725
+     ]
+    },
+    {
+     "text": "Bag — GAL HAYUN",
+     "box": [
+      0.5538,
+      0.725,
+      0.9314,
+      0.7492
+     ]
+    },
+    {
+     "text": "Sunglasses & Jewelry — AURA TO GO",
+     "box": [
+      0.5538,
+      0.7492,
+      0.9314,
+      0.7734
+     ]
+    },
+    {
+     "text": "Nails — LIHI EDWARDS",
+     "box": [
+      0.5538,
+      0.7734,
+      0.9314,
+      0.7976
+     ]
+    }
+   ]
+  },
+  {
+   "file": "pages/32.jpg",
+   "look": "30",
+   "figure": [
+    0.3822,
+    0.3976,
+    0.9314,
+    0.9435
+   ],
+   "credits": [
+    {
+     "text": "Dress — MISHIMONO",
+     "box": [
+      0.0686,
+      0.7008,
+      0.4462,
+      0.725
+     ]
+    },
+    {
+     "text": "Jewelry — RITUAL",
+     "box": [
+      0.0686,
+      0.725,
+      0.4462,
+      0.7492
+     ]
+    },
+    {
+     "text": "Nails — LIHI EDWARDS",
+     "box": [
+      0.0686,
+      0.7492,
+      0.4462,
+      0.7734
+     ]
+    },
+    {
+     "text": "Heels — AURA TO GO",
+     "box": [
+      0.0686,
+      0.7734,
+      0.4462,
+      0.7976
+     ]
+    }
+   ]
+  }
+ ]
+}

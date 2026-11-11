@@ -19,6 +19,7 @@ tick();
 setInterval(tick, 10000);
 
 // Click the logo to invert paper/ink
-document.querySelector(".logo").addEventListener("click", () => {
+const logo = document.querySelector(".logo");
+if (logo) logo.addEventListener("click", () => {
   document.body.classList.toggle("inverted");
 });

@@ -69,3 +69,10 @@ body::after {
 /* invert on click (main.js) */
 body.inverted { --paper: #231f20; --ink: #efece6; }
 body { transition: background 0.4s, color 0.4s; }
+
+/* footer on phones: keep the hint short */
+.hint-short { display: none; }
+@media (max-width: 760px) {
+  .hint-long { display: none; }
+  .hint-short { display: inline; }
+}
