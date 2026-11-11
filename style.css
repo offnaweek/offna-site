@@ -104,7 +104,6 @@ body {
   display: flex;
   flex-direction: column;
   gap: clamp(28px, 5vw, 48px);
-  margin-top: clamp(40px, 6vw, 80px);
 }
 .about__head { display: flex; justify-content: space-between; }
 .about__title {
