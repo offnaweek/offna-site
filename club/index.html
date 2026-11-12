@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
+  <script>if (Date.now() >= Date.parse("2026-11-12T14:15:00+02:00")) location.replace("/");</script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta http-equiv="Cache-Control" content="no-cache">
@@ -64,7 +65,7 @@
       var pad = function (n) { return String(n).padStart(2, "0"); };
       (function tick() {
         var ms = target - Date.now();
-        if (ms <= 0) { el.textContent = "Open now"; setTimeout(function () { location.reload(); }, 60000); return; }
+        if (ms <= 0) { location.replace("/"); return; }
         var s = Math.floor(ms / 1000);
         el.textContent = pad(Math.floor(s / 3600)) + ":" + pad(Math.floor(s % 3600 / 60)) + ":" + pad(s % 60);
         setTimeout(tick, 1000);
