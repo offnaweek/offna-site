@@ -12,30 +12,34 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="club.css?v=3">
+  <link rel="stylesheet" href="club.css?v=4">
 </head>
 <style>
-  .tap { min-height: 100svh; background: var(--volt); color: var(--ink); display: grid; place-items: center; text-align: center;
+  .tap { min-height: 80svh; background: var(--volt); color: var(--ink); display: grid; place-items: center; text-align: center;
          padding: var(--gutter); padding-bottom: calc(var(--gutter) + env(safe-area-inset-bottom)); }
   .tap__in { display: grid; gap: clamp(18px, 4vw, 32px); justify-items: center; }
   .tap h1 { font-weight: 700; font-size: clamp(64px, 19vw, 220px); line-height: 0.84; letter-spacing: -0.06em; text-transform: uppercase; }
   .tap__count { font-family: var(--grotesk); font-variant-numeric: tabular-nums; font-weight: 700; font-size: clamp(22px, 5vw, 40px);
                 letter-spacing: -0.02em; border-top: var(--rule) solid var(--ink); padding-top: 14px; min-width: 10ch; }
   .stub { display: none !important; }
+  .card--first { border-top: 0; min-height: 70svh; align-content: center; padding-top: calc(clamp(40px, 8vw, 96px) + env(safe-area-inset-top)); }
+  .card__logo { width: 110px; color: var(--volt); margin-bottom: 8px; }
 </style>
 <body>
-  <section class="finder" id="top">
-    <img class="finder__img" id="d-image" alt="">
-    <div class="finder__logo logo" data-logo aria-hidden="true"></div>
-    <div class="frame">
-      <p class="corner tl" id="d-kicker"></p>
-      <p class="corner tr" id="d-date"></p>
-      <p class="corner bl">Members Club<br>2026–2027</p>
-      <p class="corner br" id="d-time"></p>
-      <div class="scale" aria-hidden="true"></div>
+  <section class="card card--first" id="card">
+    <div class="logo card__logo" data-logo aria-label="OFF/NA"></div>
+    <p class="label">The member card</p>
+    <h2 class="card__title">Welcome to OFF/NA ×&nbsp;Israel Canada Fashion&nbsp;Week!</h2>
+    <div class="card__text">
+      <p>To thank you for your support we decided to gift all of our guests with this very exclusive member card.</p>
+      <p>At any time, you can hold the card to your phone to stay updated on upcoming events and get various discounts.</p>
     </div>
-    <a class="scroll-cue" href="#tap">Drop <span id="d-num"></span> ↓</a>
+    <nav class="card__actions">
+      <a class="cbtn cbtn--fill" href="https://selector.org.il/e/G-GPWnru4E4" target="_blank" rel="noopener"><span>30% off tonight’s after party</span><span>→</span></a>
+    </nav>
   </section>
+  <!-- club.js targets, hidden -->
+  <div class="stub" aria-hidden="true"><img id="d-image" alt=""><p id="d-kicker"></p><p id="d-date"></p><p id="d-time"></p><span id="d-num"></span></div>
 
   <section class="tap" id="tap">
     <div class="tap__in">
@@ -55,7 +59,7 @@
   <script src="club.js?v=5"></script>
 <script>
     (function () {
-      var cue = document.querySelector(".scroll-cue"); if (cue) cue.innerHTML = "Tap again at 14:00 ↓";
+      
       var el = document.getElementById("count"), target = Date.parse("2026-11-12T14:00:00+02:00");
       var pad = function (n) { return String(n).padStart(2, "0"); };
       (function tick() {
