@@ -538,7 +538,12 @@
   {
    "file": "pages/12.jpg",
    "look": "11",
-   "figure": null,
+   "figure": [
+    0.4953,
+    0.2152,
+    0.8747,
+    0.9148
+   ],
    "credits": [
     {
      "text": "Dress — TZELLEM",
