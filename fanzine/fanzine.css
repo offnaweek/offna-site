@@ -299,71 +299,83 @@
 }
 
 /* ── touch hints ────────────────────────────────────── */
-/* flash: when a page lands, its credits light up yellow and the look gets a pulse */
+/* flash (optional, data-hint="flash"): credits light up when a page lands */
 .is-flashing .fz-credit { animation: fz-flash 1.4s ease-out both; }
 .is-flashing .fz-credit:nth-of-type(2) { animation-delay: 0.08s; }
 .is-flashing .fz-credit:nth-of-type(3) { animation-delay: 0.16s; }
-.is-flashing .fz-credit:nth-of-type(4) { animation-delay: 0.24s; }
-.is-flashing .fz-credit:nth-of-type(5) { animation-delay: 0.32s; }
-.is-flashing .fz-credit:nth-of-type(n+6) { animation-delay: 0.4s; }
-@keyframes fz-flash {
-  0% { background: transparent; }
-  25% { background: var(--volt); mix-blend-mode: multiply; }
-  100% { background: transparent; }
-}
-.is-flashing .fz-figure { animation: fz-pulse 1.4s ease-out 0.3s both; border-radius: 4px; }
-@keyframes fz-pulse {
-  0% { box-shadow: 0 0 0 0 rgba(222, 255, 0, 0.9); }
-  100% { box-shadow: 0 0 0 22px rgba(222, 255, 0, 0); }
-}
+.is-flashing .fz-credit:nth-of-type(n+4) { animation-delay: 0.24s; }
+@keyframes fz-flash { 25% { background: var(--volt); mix-blend-mode: multiply; } }
 
-/* coach: a one-time explainer */
-.fz-coach {
-  position: absolute;
-  inset: 0;
-  z-index: 8;
-  cursor: pointer;
-  animation: fz-in 0.3s ease-out both;
-}
-.fz-coach.is-out { opacity: 0; transition: opacity 0.25s; }
-@keyframes fz-in { from { opacity: 0; } }
+/* coach: the one-time "tap to shop" explainer */
+.fz-coach { position: absolute; inset: 0; z-index: 8; cursor: pointer; animation: fz-fade 0.35s ease-out both; }
+.fz-coach.no-spot { background: rgba(0, 0, 0, 0.72); }
+.fz-coach.is-out { opacity: 0; transition: opacity 0.3s; }
+@keyframes fz-fade { from { opacity: 0; } }
+
 .fz-coach__spot {
   position: absolute;
-  border: var(--rule) solid var(--volt);
-  box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.72);    /* dims everything but the credit */
+  box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.74);      /* dims everything but the credit line */
   pointer-events: none;
 }
-.fz-coach__hand {
+.fz-coach__mark {                                    /* a yellow underline swipes in under the line */
   position: absolute;
-  width: 40px;
-  height: 46px;
+  left: 4px;
+  right: 4px;
+  bottom: -3px;
+  height: 3px;
+  background: var(--volt);
+  transform-origin: left center;
+  animation: fz-swipe 0.55s cubic-bezier(.6, 0, .2, 1) 0.35s both;
+}
+@keyframes fz-swipe { from { transform: scaleX(0); } }
+
+.fz-coach__tap {                                     /* a tap: a dot and two rings rippling out */
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  margin: -7px 0 0 -7px;
+  border-radius: 50%;
+  background: var(--volt);
   pointer-events: none;
-  animation: fz-tap 1.2s ease-in-out infinite;
-  transform-origin: 30% 10%;
+  animation: fz-dot 1.6s ease-in-out 0.9s infinite both;
 }
-@keyframes fz-tap {
-  0%, 100% { transform: translate(0, 6px) scale(1); }
-  45% { transform: translate(-3px, -2px) scale(0.92); }
-  55% { transform: translate(-3px, -2px) scale(0.92); }
+.fz-coach__tap::before, .fz-coach__tap::after {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: 50%;
+  border: 2px solid var(--volt);
+  animation: fz-ring 1.6s ease-out 0.9s infinite both;
 }
+.fz-coach__tap::after { animation-delay: 1.15s; }
+.fz-coach__tap--late, .fz-coach__tap--late::before { animation-delay: 1.7s; }
+.fz-coach__tap--late::after { animation-delay: 1.95s; }
+@keyframes fz-dot { 0%, 100% { transform: scale(1); } 12% { transform: scale(0.7); } 24% { transform: scale(1); } }
+@keyframes fz-ring { 0% { transform: scale(1); opacity: 0.9; } 70%, 100% { transform: scale(4.2); opacity: 0; } }
+
 .fz-coach__card {
   position: absolute;
-  left: 16px;
-  right: 16px;
+  left: 14px;
+  right: 14px;
   background: var(--volt);
   color: var(--ink);
-  border: var(--rule) solid var(--ink);
-  padding: 16px 16px 14px;
+  padding: 12px 14px 14px;
   display: grid;
   gap: 8px;
+  animation: fz-up 0.5s cubic-bezier(.2, .8, .2, 1) 0.5s both;
 }
-.fz-coach__title { font-weight: 700; font-size: 22px; line-height: 1; letter-spacing: -0.03em; text-transform: uppercase; }
-.fz-coach__text { font-weight: 500; font-size: 15px; line-height: 1.35; }
+.fz-coach__card.at-bottom { bottom: 14px; }
+.fz-coach__card.at-top { top: 14px; }
+@keyframes fz-up { from { transform: translateY(16px); opacity: 0; } }
+.fz-coach__kicker { font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; padding-bottom: 8px; border-bottom: var(--rule) solid var(--ink); }
+.fz-coach__title { font-weight: 700; font-size: 40px; line-height: 0.9; letter-spacing: -0.05em; text-transform: uppercase; }
+.fz-coach__text { font-weight: 500; font-size: 14px; line-height: 1.35; max-width: 24em; }
 .fz-coach__ok {
-  justify-self: start;
-  margin-top: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   min-height: 44px;
-  padding: 0 18px;
+  padding: 0 14px;
   border: var(--rule) solid var(--ink);
   background: var(--ink);
   color: var(--volt);
@@ -371,4 +383,7 @@
   text-transform: uppercase;
   cursor: pointer;
 }
-@media (prefers-reduced-motion: reduce) { .fz-coach__hand { animation: none; } }
+.fz-coach__ok svg { width: 20px; height: 20px; }
+@media (prefers-reduced-motion: reduce) {
+  .fz-coach__mark, .fz-coach__tap, .fz-coach__tap::before, .fz-coach__tap::after, .fz-coach__card { animation: none; }
+}
