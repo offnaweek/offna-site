@@ -31,7 +31,7 @@ window.BRANDS = {
   "NOON": "https://noonstudio.online/",
   "OMER ASH": "https://omerash.com/",
   "ORI TAMIR": "https://www.oritamir.com/",
-  "RITUAL": "https://www.instagram.com/ritual__________________/",
+  "RITUAL": "https://ritualworld.shop/",
   "SHEKEL KLAN": "https://shekel-klan.com/",
   "SOMEONE OBJECTS": "https://www.instagram.com/someone.objects/",
   "SWIT": "https://www.instagram.com/swit.wear/",
