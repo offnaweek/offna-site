@@ -3,83 +3,69 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="robots" content="noindex">
+  <meta http-equiv="Cache-Control" content="no-cache">
   <meta name="theme-color" content="#000000">
+  <meta name="robots" content="noindex">
   <title>OFF/NA — Tap again at 14:00</title>
-  <!-- TEMPORARY (12.11, until 14:00): the NFC cards point here. At 14:00 the Members Club page comes back. -->
+  <!-- TEMPORARY (12.11, until 14:00). At 14:00 the Members Club page comes back. -->
+  <link rel="icon" href="../assets/logo.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@500;700&display=swap" rel="stylesheet">
-  <style>
-    :root { --volt: #deff00; --ink: #000; --gutter: clamp(16px, 4vw, 40px); --rule: 3px; }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html, body { height: 100%; }
-    body {
-      background: var(--ink);
-      color: var(--volt);
-      font-family: "Geist", "Helvetica Neue", Arial, sans-serif;
-      font-weight: 500;
-      -webkit-font-smoothing: antialiased;
-    }
-    .finder { position: relative; min-height: 100svh; display: grid; place-items: center; padding: calc(var(--gutter) * 2.4) var(--gutter); }
-    .corner { position: absolute; width: 44px; height: 44px; border: 0 solid var(--volt); }
-    .tl { top: var(--gutter); left: var(--gutter); border-top-width: var(--rule); border-left-width: var(--rule); }
-    .tr { top: var(--gutter); right: var(--gutter); border-top-width: var(--rule); border-right-width: var(--rule); }
-    .bl { bottom: var(--gutter); left: var(--gutter); border-bottom-width: var(--rule); border-left-width: var(--rule); }
-    .br { bottom: var(--gutter); right: var(--gutter); border-bottom-width: var(--rule); border-right-width: var(--rule); }
-    .label { font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; }
-    .top { position: absolute; top: calc(var(--gutter) + 14px); left: calc(var(--gutter) + 16px); right: calc(var(--gutter) + 16px); display: flex; justify-content: space-between; align-items: center; }
-    .logo { display: block; width: 92px; line-height: 0; color: inherit; }
-    .logo svg { width: 100%; height: auto; display: block; }
-    .logo:not(:has(svg)) { color: transparent; }
-    main { text-align: center; display: grid; gap: clamp(18px, 4vw, 32px); justify-items: center; }
-    h1 { font-weight: 700; font-size: clamp(64px, 19vw, 220px); line-height: 0.84; letter-spacing: -0.06em; text-transform: uppercase; }
-    .count { font-variant-numeric: tabular-nums; font-weight: 700; font-size: clamp(22px, 5vw, 40px); letter-spacing: -0.02em; border-top: var(--rule) solid var(--volt); padding-top: 14px; min-width: 10ch; }
-    .btn {
-      display: inline-flex; align-items: center; gap: 12px; min-height: 52px; padding: 0 18px;
-      border: var(--rule) solid var(--volt); color: var(--volt); text-decoration: none;
-      font-weight: 700; font-size: 16px; text-transform: uppercase;
-    }
-    .btn:hover, .btn:focus-visible { background: var(--volt); color: var(--ink); outline: none; }
-    .btn svg { width: 20px; height: 20px; }
-    .bottom { position: absolute; bottom: calc(var(--gutter) + 14px); left: 0; right: 0; text-align: center; opacity: 0.6; }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="club.css?v=3">
 </head>
+<style>
+  .tap { min-height: 100svh; background: var(--volt); color: var(--ink); display: grid; place-items: center; text-align: center;
+         padding: var(--gutter); padding-bottom: calc(var(--gutter) + env(safe-area-inset-bottom)); }
+  .tap__in { display: grid; gap: clamp(18px, 4vw, 32px); justify-items: center; }
+  .tap h1 { font-weight: 700; font-size: clamp(64px, 19vw, 220px); line-height: 0.84; letter-spacing: -0.06em; text-transform: uppercase; }
+  .tap__count { font-family: var(--grotesk); font-variant-numeric: tabular-nums; font-weight: 700; font-size: clamp(22px, 5vw, 40px);
+                letter-spacing: -0.02em; border-top: var(--rule) solid var(--ink); padding-top: 14px; min-width: 10ch; }
+  .stub { display: none !important; }
+</style>
 <body>
-  <div class="finder">
-    <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
-    <div class="top label">
-      <span class="logo" data-logo aria-label="OFF/NA">OFF/NA</span>
-      <span>Members Club</span>
+  <section class="finder" id="top">
+    <img class="finder__img" id="d-image" alt="">
+    <div class="finder__logo logo" data-logo aria-hidden="true"></div>
+    <div class="frame">
+      <p class="corner tl" id="d-kicker"></p>
+      <p class="corner tr" id="d-date"></p>
+      <p class="corner bl">Members Club<br>2026–2027</p>
+      <p class="corner br" id="d-time"></p>
+      <div class="scale" aria-hidden="true"></div>
     </div>
-    <main>
-      <h1>Tap again<br>at 14:00</h1>
-      <p class="count label" id="count" aria-live="polite">Opens at 14:00</p>
-      <a class="btn" href="/">Meanwhile, read the fanzine <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square"/></svg></a>
-    </main>
-    <p class="bottom label">Runway 12.11 · Israel Canada Fashion Week</p>
-  </div>
-  <script>
-    fetch("/assets/logo.svg").then((r) => r.text()).then((svg) => {
-      document.querySelectorAll("[data-logo]").forEach((el) => (el.innerHTML = svg));
-    }).catch(() => {});
+    <a class="scroll-cue" href="#tap">Drop <span id="d-num"></span> ↓</a>
+  </section>
 
-    // countdown to 14:00 Tel Aviv time; at 14:00 the page reloads (the club page will be back)
-    const el = document.getElementById("count");
-    const target = Date.parse("2026-11-12T14:00:00+02:00");
-    const pad = (n) => String(n).padStart(2, "0");
-    function tick() {
-      const ms = target - Date.now();
-      if (ms <= 0) {
-        el.textContent = "Open now";
-        setTimeout(() => location.reload(), 60000);   // give the switch a minute to go live
-        return;
-      }
-      const s = Math.floor(ms / 1000);
-      el.textContent = `${pad(Math.floor(s / 3600))}:${pad(Math.floor((s % 3600) / 60))}:${pad(s % 60)}`;
-      setTimeout(tick, 1000);
-    }
-    tick();
+  <section class="tap" id="tap">
+    <div class="tap__in">
+      <h1>Tap again<br>at 14:00</h1>
+      <p class="tap__count" id="count" aria-live="polite">Opens at 14:00</p>
+    </div>
+  </section>
+
+  <!-- stubs that club.js fills; hidden on this temporary page -->
+  <div class="stub" aria-hidden="true">
+    <span data-num></span><p id="d-countdown"></p><h2 id="d-title"></h2>
+    <dl><div id="f-date"><dt></dt><dd></dd></div><div id="f-time"><dt></dt><dd></dd></div><div id="f-place"><dt></dt><dd></dd></div></dl>
+    <p id="d-text"></p><nav id="d-links"></nav>
+  </div>
+
+  <script src="drop.js?v=3"></script>
+  <script src="club.js?v=5"></script>
+<script>
+    (function () {
+      var cue = document.querySelector(".scroll-cue"); if (cue) cue.innerHTML = "Tap again at 14:00 ↓";
+      var el = document.getElementById("count"), target = Date.parse("2026-11-12T14:00:00+02:00");
+      var pad = function (n) { return String(n).padStart(2, "0"); };
+      (function tick() {
+        var ms = target - Date.now();
+        if (ms <= 0) { el.textContent = "Open now"; setTimeout(function () { location.reload(); }, 60000); return; }
+        var s = Math.floor(ms / 1000);
+        el.textContent = pad(Math.floor(s / 3600)) + ":" + pad(Math.floor(s % 3600 / 60)) + ":" + pad(s % 60);
+        setTimeout(tick, 1000);
+      })();
+    })();
   </script>
 </body>
 </html>
