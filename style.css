@@ -189,3 +189,6 @@ body {
 .fz-bar { flex-direction: column; align-items: center; gap: 10px; }
 .fz-bar .hint { text-align: center; }
 .fz-bar .fz-strip { flex: none; width: min(640px, 100%); margin: 0; }
+
+/* until the logo SVG has loaded, don't flash the fallback word "OFF/NA" */
+[data-logo]:not(:has(svg)) { color: transparent; }
