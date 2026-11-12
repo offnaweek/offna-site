@@ -163,6 +163,68 @@
     if (strip) [...strip.children].forEach((b, k) => b.setAttribute("aria-current", k === at ? "true" : "false"));
     history.replaceState(null, "", at ? `#p${v.find((i) => i >= 0) + 1}` : location.pathname + location.search);
     [views[at + 1], views[at - 1]].forEach((w) => w && w.forEach((i) => { if (i >= 0) new Image().src = pages[i].file; }));
+    hints();
+  }
+
+  // ── showing touch users what can be tapped ───────────────
+  // data-hint on #fanzine: "flash" (credits light up when a page lands), "coach" (a one-time
+  // "tap to shop" explainer), "both", or "none". Only on touch screens, unless ?hints=show is in the URL.
+  const qh = (location.search.match(/[?&]hints=(\w+)/) || [])[1];     // ?hints=flash|coach|both forces a demo
+  const HINT = qh && qh !== "show" ? qh : root.dataset.hint || "both";
+  const forceHints = !!qh;
+  const touch = window.matchMedia("(hover: none)").matches || forceHints;
+  let coachSeen = false;
+  try { coachSeen = localStorage.getItem("fz-coach") === "1"; } catch (_) {}
+  if (forceHints) coachSeen = false;
+
+  function hints() {
+    if (!touch || !book) return;
+    const hasShop = book.querySelector(".fz-credit, .fz-figure");
+    if (!hasShop) return;
+    if ((HINT === "coach" || HINT === "both") && !coachSeen) return coach();
+    if (HINT === "flash" || HINT === "both") flash();
+  }
+  function flash() {
+    if (reduced.matches) return;
+    const b = book;
+    b.classList.remove("is-flashing");
+    void b.offsetWidth;                               // restart the animation
+    b.classList.add("is-flashing");
+    setTimeout(() => b.classList.remove("is-flashing"), 1800);
+  }
+  function coach() {
+    const credit = book.querySelector(".fz-credit");
+    const figure = book.querySelector(".fz-figure");
+    const target = credit || figure;
+    const r0 = root.getBoundingClientRect(), r = target.getBoundingClientRect();
+    const c = document.createElement("div");
+    c.className = "fz-coach";
+    c.setAttribute("role", "dialog");
+    c.setAttribute("aria-label", "How to shop the fanzine");
+    c.innerHTML = `
+      <div class="fz-coach__spot" style="left:${r.left - r0.left - 6}px;top:${r.top - r0.top - 4}px;width:${r.width + 12}px;height:${r.height + 8}px"></div>
+      <svg class="fz-coach__hand" style="left:${r.left - r0.left + r.width * 0.55}px;top:${r.top - r0.top + r.height * 0.4}px" viewBox="0 0 48 56" aria-hidden="true">
+        <path d="M17 30V8a4 4 0 0 1 8 0v16-6a4 4 0 0 1 8 0v8-4a4 4 0 0 1 8 0v14c0 9-6 16-15 16h-2c-6 0-10-3-13-8L4 33a4 4 0 0 1 6-5l7 7" fill="#deff00" stroke="#000" stroke-width="2.5" stroke-linejoin="round"/>
+      </svg>
+      <div class="fz-coach__card">
+        <p class="fz-coach__title">Everything here is shoppable</p>
+        <p class="fz-coach__text">Tap a credit, or tap the look itself, to go straight to the designer.</p>
+        <button type="button" class="fz-coach__ok">Got it</button>
+      </div>`;
+    root.appendChild(c);
+    // the card sits on the side of the page away from the highlighted credit
+    const card = c.querySelector(".fz-coach__card");
+    const below = r.top - r0.top < r0.height / 2;
+    card.style[below ? "bottom" : "top"] = "16px";
+    const done = (e) => {
+      if (e) e.stopPropagation();
+      coachSeen = true;
+      try { localStorage.setItem("fz-coach", "1"); } catch (_) {}
+      c.classList.add("is-out");
+      setTimeout(() => { c.remove(); flash(); }, 250);
+    };
+    c.addEventListener("click", done);
+    c.querySelector(".fz-coach__ok").focus({ preventScroll: true });
   }
 
   function edge(dir) {
