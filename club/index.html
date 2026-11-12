@@ -6,8 +6,8 @@
   <meta http-equiv="Cache-Control" content="no-cache">
   <meta name="theme-color" content="#000000">
   <meta name="robots" content="noindex">
-  <title>OFF/NA — Tap again at 14:00</title>
-  <!-- TEMPORARY (12.11, until 14:00). At 14:00 the Members Club page comes back. -->
+  <title>OFF/NA — Tap again at 14:15</title>
+  <!-- TEMPORARY (12.11, until 14:15). At 14:15 the Members Club page comes back. -->
   <link rel="icon" href="../assets/logo.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -43,8 +43,8 @@
 
   <section class="tap" id="tap">
     <div class="tap__in">
-      <h1>Tap again<br>at 14:00</h1>
-      <p class="tap__count" id="count" aria-live="polite">Opens at 14:00</p>
+      <h1>Tap again<br>at 14:15</h1>
+      <p class="tap__count" id="count" aria-live="polite">Opens at 14:15</p>
     </div>
   </section>
 
@@ -60,7 +60,7 @@
 <script>
     (function () {
       
-      var el = document.getElementById("count"), target = Date.parse("2026-11-12T14:00:00+02:00");
+      var el = document.getElementById("count"), target = Date.parse("2026-11-12T14:15:00+02:00");
       var pad = function (n) { return String(n).padStart(2, "0"); };
       (function tick() {
         var ms = target - Date.now();
