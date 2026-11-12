@@ -2,74 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta http-equiv="Cache-Control" content="no-cache">
-  <meta name="theme-color" content="#000000">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex">
-  <title>OFF/NA — Tap again at 14:15</title>
-  <!-- TEMPORARY (12.11, until 14:15). At 14:15 the Members Club page comes back. -->
-  <link rel="icon" href="../assets/logo.svg" type="image/svg+xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="club.css?v=4">
+  <title>OFF/NA</title>
+  <!-- The NFC cards point here (offnaweek.com/club/). They now open the home page with the fanzine.
+       The Members Club page itself lives on at /members/. -->
+  <meta http-equiv="refresh" content="0; url=/">
+  <script>location.replace("/" + location.hash);</script>
+  <style>body { background: #000; }</style>
 </head>
-<style>
-  .tap { min-height: 80svh; background: var(--volt); color: var(--ink); display: grid; place-items: center; text-align: center;
-         padding: var(--gutter); padding-bottom: calc(var(--gutter) + env(safe-area-inset-bottom)); }
-  .tap__in { display: grid; gap: clamp(18px, 4vw, 32px); justify-items: center; }
-  .tap h1 { font-weight: 700; font-size: clamp(64px, 19vw, 220px); line-height: 0.84; letter-spacing: -0.06em; text-transform: uppercase; }
-  .tap__count { font-family: var(--grotesk); font-variant-numeric: tabular-nums; font-weight: 700; font-size: clamp(22px, 5vw, 40px);
-                letter-spacing: -0.02em; border-top: var(--rule) solid var(--ink); padding-top: 14px; min-width: 10ch; }
-  .stub { display: none !important; }
-  .card--first { border-top: 0; min-height: 70svh; align-content: center; padding-top: calc(clamp(40px, 8vw, 96px) + env(safe-area-inset-top)); }
-  .card__logo { width: 110px; color: var(--volt); margin-bottom: 8px; }
-</style>
-<body>
-  <section class="card card--first" id="card">
-    <div class="logo card__logo" data-logo aria-label="OFF/NA"></div>
-    <p class="label">The member card</p>
-    <h2 class="card__title">Welcome to OFF/NA ×&nbsp;Israel Canada Fashion&nbsp;Week!</h2>
-    <div class="card__text">
-      <p>To thank you for your support we decided to gift all of our guests with this very exclusive member card.</p>
-      <p>At any time, you can hold the card to your phone to stay updated on upcoming events and get various discounts.</p>
-    </div>
-    <nav class="card__actions">
-      <a class="cbtn cbtn--fill" href="https://selector.org.il/e/G-GPWnru4E4" target="_blank" rel="noopener"><span>30% off tonight’s after party</span><span>→</span></a>
-    </nav>
-  </section>
-  <!-- club.js targets, hidden -->
-  <div class="stub" aria-hidden="true"><img id="d-image" alt=""><p id="d-kicker"></p><p id="d-date"></p><p id="d-time"></p><span id="d-num"></span></div>
-
-  <section class="tap" id="tap">
-    <div class="tap__in">
-      <h1>Tap again<br>at 14:15</h1>
-      <p class="tap__count" id="count" aria-live="polite">Opens at 14:15</p>
-    </div>
-  </section>
-
-  <!-- stubs that club.js fills; hidden on this temporary page -->
-  <div class="stub" aria-hidden="true">
-    <span data-num></span><p id="d-countdown"></p><h2 id="d-title"></h2>
-    <dl><div id="f-date"><dt></dt><dd></dd></div><div id="f-time"><dt></dt><dd></dd></div><div id="f-place"><dt></dt><dd></dd></div></dl>
-    <p id="d-text"></p><nav id="d-links"></nav>
-  </div>
-
-  <script src="drop.js?v=3"></script>
-  <script src="club.js?v=5"></script>
-<script>
-    (function () {
-      
-      var el = document.getElementById("count"), target = Date.parse("2026-11-12T14:15:00+02:00");
-      var pad = function (n) { return String(n).padStart(2, "0"); };
-      (function tick() {
-        var ms = target - Date.now();
-        if (ms <= 0) { el.textContent = "Open now"; setTimeout(function () { location.reload(); }, 60000); return; }
-        var s = Math.floor(ms / 1000);
-        el.textContent = pad(Math.floor(s / 3600)) + ":" + pad(Math.floor(s % 3600 / 60)) + ":" + pad(s % 60);
-        setTimeout(tick, 1000);
-      })();
-    })();
-  </script>
-</body>
+<body></body>
 </html>
