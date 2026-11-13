@@ -23,7 +23,7 @@ window.BRANDS = {
   "LIHI EDWARDS": "https://www.instagram.com/tipsiz.by.lihi/",
   "LYD": "https://lydofficial.com/",
   "MARGO": "https://www.instagram.com/merit.seger/",
-  "MAYA SHAKED": "",
+  "MAYA SHAKED": "https://www.instagram.com/m_________ay____a/",
   "MISHIMONO": "https://www.mishimono.com/en",
   "MOKHOVART": "https://www.instagram.com/mokhovart/",
   "NEVERAGAIN": "https://www.instagram.com/neveragain__neveragain/",
