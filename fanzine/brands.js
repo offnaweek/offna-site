@@ -38,7 +38,7 @@ window.BRANDS = {
   "TENDER HEART": "https://www.tenderheart.shop/",
   "TOSHKA": "https://toshkastudios.com/",
   "TZELLEM": "https://www.tzellem.com/",
-  "ULTRA COMPLEX": "https://www.instagram.com/ultra.complex/",
+  "ULTRA COMPLEX": "https://ultra-complex.com/shop",
   "VLADA BOUTIQUE": "https://vladaboutique.com/en",
   "YUCCA & OLALA": "https://yucca.co.il/",
   "ZOE MELANKER": "https://www.instagram.com/zoemelanker/"
